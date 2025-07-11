@@ -1,0 +1,55 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package Questions;
+
+import java.awt.Color;
+import java.util.Arrays;
+
+/**
+ *
+ * @author august.preuss
+ */
+public class Parrot extends Bird
+{
+    
+    private String [] knownWords;
+    
+    
+    public Parrot(){
+        super("Polly", 2010, Color.GREEN);
+        this.knownWords = new String []{"Polly"};
+                
+    }
+    
+    public String addWord(String word){
+        return knownWords + word; 
+    }
+    
+    public String listWordsKnown(){
+        return 
+    }
+    
+    public String toString(){
+        return super.toString() + ", " + knownWords;
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+}

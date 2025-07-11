@@ -1,0 +1,63 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package Questions;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author August Preuss
+ */
+public class MenuHelper {
+    public static void main(String [] args){
+        
+    
+    String message;
+    int min;
+    int max;
+    
+    
+    
+     public static int displayMenu(String message, int min, int max){
+         Scanner scan = new Scanner(System.in);
+         while(!scan.hasNextInt()){
+            
+        }
+         
+     }       
+            
+        
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+ public static void main(String [] args){           
+            
+            
+            
+}           
+
+
+}           
+            
+            
+            
+            
+            
+            
+    

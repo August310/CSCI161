@@ -1,0 +1,60 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package Questions;
+
+import java.awt.Color;
+
+/**
+ *
+ * @author august.preuss
+ */
+public class Dog {
+
+    private String dogName;
+    private int tricks;
+    private Color black;
+
+    public Dog() {
+        dogName = "Oswald";
+        tricks = 0;
+        black = Color.BLACK;
+    }
+
+    public Dog(String dogName, int tricks, Color black) {
+        this.dogName = dogName;
+        this.tricks = tricks;
+        this.black = black;
+    }
+
+    public String getDogName() {
+
+        return dogName;
+
+    }
+
+    public int getDogTricks() {
+
+        return tricks;
+
+    }
+
+    public Color getDogColor() {
+
+        return black;
+
+    }
+
+    public void setDogTricks(int newTricks) {
+
+        tricks = newTricks;
+
+    }
+
+    public String toString() {
+
+        return "My dogs name is " + dogName + ". His fur is " + black + ". He knows how to do " + tricks + " tricks.";
+
+    }
+}

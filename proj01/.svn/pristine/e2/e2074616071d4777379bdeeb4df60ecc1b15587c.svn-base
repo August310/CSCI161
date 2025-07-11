@@ -1,0 +1,55 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package TextAdventure;
+
+/**
+ *
+ * @author August
+ */
+public class Creature {
+private String name;
+private String description;
+private String defeated;
+private Item item;   
+
+    
+   
+    public Creature(String name, String description, String defeated){
+        this.name = name;
+        this.description = description;
+        this.defeated = defeated;
+    }
+
+    public String getName(){
+        return name;
+    }
+
+    public String getDescription(){
+        return description;
+    }
+
+    public String getDefeated(){
+        return defeated;
+    }
+
+    public Item getItemToDestroy(){
+        return item;
+    }
+
+    public void setItemToDestroy(Item item){
+        this.item = item;
+    }
+
+   
+
+
+
+
+
+
+
+
+
+}

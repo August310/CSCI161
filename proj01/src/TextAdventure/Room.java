@@ -1,0 +1,114 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package TextAdventure;
+
+/**
+ *
+ * @author August
+ */
+public class Room {
+
+    private String roomName;
+    private String roomDescription;
+    private Exit exit1;
+    private Exit exit2;
+    private Exit exit3;
+    private Exit exit4;
+    private Exit secretExit;
+    private Item item;
+    private Creature creature;
+
+    public Room(String roomName, String roomDescription, Creature creature) {
+        this.roomName = roomName;
+        this.roomDescription = roomDescription;
+        this.creature = creature;
+    }
+
+    public Room(String roomName, String roomDescription, Item item) {
+        this.roomName = roomName;
+        this.roomDescription = roomDescription;
+        this.item = item;
+
+    }
+
+    public Room(String roomName, String roomDescription) {
+        this.roomName = roomName;
+        this.roomDescription = roomDescription;
+
+    }
+
+    public String getName() {
+        return roomName;
+    }
+
+    public String getDescription() {
+        return roomDescription;
+    }
+
+    public Exit getExit1() {
+        return exit1;
+    }
+
+    public Exit getExit2() {
+        return exit2;
+    }
+
+    public Exit getExit3() {
+        return exit3;
+    }
+
+    public Exit getExit4() {
+        return exit4;
+    }
+
+    public Exit getSecretExit() {
+        return secretExit;
+    }
+
+    public Item getItem() {
+        return item;
+    }
+
+    public Creature getCreature() {
+        return creature;
+    }
+
+    public void setName(String newName) {
+        roomName = newName;
+    }
+
+    public void setDescription(String newDescription) {
+        roomDescription = newDescription;
+    }
+
+    public void setExit1(Exit exit1) {
+        this.exit1 = exit1;
+    }
+
+    public void setExit2(Exit exit2) {
+        this.exit2 = exit2;
+    }
+
+    public void setExit3(Exit exit3) {
+        this.exit3 = exit3;
+    }
+
+    public void setExit4(Exit exit4) {
+        this.exit4 = exit4;
+    }
+
+    public void setSecretExit(Exit secretExit) {
+        this.secretExit = secretExit;
+    }
+
+    public void setItem(Item item) {
+        this.item = item;
+    }
+
+    public void setCreature(Creature creature) {
+        this.creature = creature;
+    }
+
+}

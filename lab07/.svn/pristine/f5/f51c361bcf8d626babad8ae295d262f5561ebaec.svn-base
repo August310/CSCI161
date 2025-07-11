@@ -1,0 +1,63 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+package Questions;
+
+import java.awt.EventQueue;
+import java.awt.Graphics;
+import javax.swing.JFrame;
+
+/**
+ *
+ * @author (Your Name Here)
+ */
+public class Animation extends JFrame
+{
+    /*  For this portion of the assignment, you will be creating a simple animation
+        of a ball that moves around the screen of an applet and bounces off of the
+        walls.
+
+        You may wish to view the pre-recorded video on Animation before completing this part
+        of the assignment. The approach used here differs from those presented in the text book
+
+        As part of this assignment, you will need to have first completed the Ball class.
+
+        1) Create an instance of the Ball class and make sure it can draw itself
+        2) Complete the detectCollisions method that determines when your Ball object
+            has collided with any of the walls, in which case it should reverse direction.
+        3) Create an instance of the Timer class and assign it an ActionListener that
+            moves the ball around and repaints the screen every time it triggers its event
+    */
+
+    public Animation()
+    {
+        // Set the size of the Window
+        super.setSize(400, 400);
+
+        // Terminate the Program when closing the Window
+        super.setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        // Create, configure, and start your Timer here
+
+
+    }
+
+    @Override
+    public void paint(Graphics g)
+    {
+
+    }
+
+    public void detectCollisions()
+    {
+
+    }
+
+    public static void main(String[] args)
+    {
+        EventQueue.invokeLater(() -> new Animation().setVisible(true));
+    }
+}

@@ -1,0 +1,50 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package Questions;
+
+import ProvidedClasses.Animal;
+import java.awt.Color;
+
+/**
+ *
+ * @author august.preuss
+ */
+public class Bird extends Animal
+{
+    
+private Color featherColor;
+
+public Bird(){
+    super();
+    featherColor = Color.RED;
+    
+}
+
+public Bird(String name, int birthYear, Color featherColor){
+    super(name, birthYear);     
+    this.featherColor = featherColor;
+}
+
+public Color getFeatherColor(){
+    return featherColor;
+}
+
+@Override
+public String toString(){
+    return super.toString() + ", " + featherColor;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+}

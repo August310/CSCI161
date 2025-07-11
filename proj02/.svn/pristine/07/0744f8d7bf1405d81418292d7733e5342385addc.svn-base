@@ -1,0 +1,97 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package GameEntities;
+
+import java.util.Random;
+
+/**
+ *
+ * @author August Preuss
+ */
+public class Survivor {
+
+    private String name;
+    private int thirst;
+    private int hunger;
+    private int energy;
+    private int health;
+    private int value;
+
+    Random rand = new Random();
+
+    Survivor(String name) {
+        name = "Dan";
+        hunger = rand.nextInt(100 - 1 + 1) + 1;
+        thirst = rand.nextInt(100 - 1 + 1) + 1;
+        energy = rand.nextInt(100 - 1 + 1) + 1;
+        health = rand.nextInt(100 - 1 + 1) + 1;
+    }
+
+    Survivor(String name, int thirst, int hunger, int energy) {
+        this.name = "Jerry";
+        this.thirst = 50;
+        this.hunger = 50;
+        this.energy = 50;
+    }
+
+    public int getThirst() {
+        return thirst;
+    }
+
+    public int getEnergy() {
+        return energy;
+    }
+
+    public int getHunger() {
+        return hunger;
+    }
+
+    public int getHealth() {
+        return health;
+    }
+
+    //Making thirst stay in the range of 0 - 100
+    public void adjustThirst(int value) {
+        thirst += value;
+
+        if (thirst > 100) {
+            thirst = 100;
+        } else if (thirst < 0) {
+            thirst = 0;
+        }
+    }
+
+    public void adjustEnergy(int value) {
+        energy += value;
+
+        if (energy > 100) {
+            energy = 100;
+        } else if (energy < 0) {
+            energy = 0;
+        }
+    }
+
+    public void adjustHunger(int value) {
+        hunger += value;
+
+        if (hunger > 100) {
+            hunger = 100;
+        } else if (hunger < 0) {
+            hunger = 0;
+        }
+    }
+
+    public void adjustHealth(int value) {
+        health += value;
+
+        if (health > 100) {
+            health = 100;
+        } else if (health < 0) {
+            health = 0;
+        }
+
+    }
+
+}

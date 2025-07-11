@@ -1,0 +1,3 @@
+Alfred Higgens,2378.125,3.75,Biology 101,Chemistry 217,Math 103,History 138
+Margret Li,1953856,3.6,Math 270,Computer Science 160,English 313,Physics 168
+David Hanson,8573521,2.7,Math 103,Biology 101,History 142

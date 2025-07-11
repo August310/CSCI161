@@ -1,0 +1,64 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package Questions;
+
+import java.text.DecimalFormat;
+
+/**
+ *
+ * @author August Preuss
+ */
+public class BaseballPlayer {
+
+    private String name;
+    private int number;
+    private int singles;
+    private int doubles;
+    private int triples;
+    private int homeRuns;
+    private int atBats;
+    private int walks;
+    private int sacrificeFlies;
+
+    public BaseballPlayer(String name, int number, int singles, int doubles, int triples, int homeRuns, int atBats, int walks, int sacrificeFlies) {
+        this.name = name;
+        this.number = number;
+        this.singles = singles;
+        this.doubles = doubles;
+        this.triples = triples;
+        this.homeRuns = homeRuns;
+        this.atBats = atBats;
+        this.walks = walks;
+        this.sacrificeFlies = sacrificeFlies;
+
+    }
+
+    public static DecimalFormat percentFormat = new DecimalFormat("#.000");
+
+    public double getBattingAverage() {
+        return (((double) singles + doubles + triples + homeRuns) / atBats);
+    }
+
+    public double getSluggingPercentage() {
+        return ((1.0 * singles) + (2 * doubles) + (3 * triples) + (4 * homeRuns)) / atBats;
+    }
+
+    public double getOnBasePercentage() {
+        return ((double) singles + doubles + triples + homeRuns + walks) / (atBats + walks + sacrificeFlies);
+    }
+
+    public String getFormattedBattingAverage() {
+        return percentFormat.format(getBattingAverage());
+    }
+
+    public String getFormattedSluggingPercentage() {
+        return percentFormat.format(getSluggingPercentage());
+    }
+
+    public String getFormattedOnBasePercentage() {
+        return percentFormat.format(getOnBasePercentage());
+    }
+
+}

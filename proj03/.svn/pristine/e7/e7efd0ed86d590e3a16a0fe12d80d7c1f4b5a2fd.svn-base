@@ -1,0 +1,124 @@
+package BookStore;
+
+import BookStore.Book;
+import java.util.ArrayList;
+import java.util.Collections;
+
+public class BookStore {
+//still changes to be made
+    String name;
+    int Book[];
+    public BookList library;
+
+    public BookStore() {
+        library = new BookList();
+        library.add(new Book("Java Servlets", "Brown", 75.99));
+        library.add(new Book("Advanced HTML", "Green", 56.99));
+        library.add(new Book("Advanced Java", "Green", 65.99));
+        library.add(new Book("Intro to Flash", "James", 34.49));
+        library.add(new Book("Intro to HTML", "James", 29.49));
+        library.add(new Book("Intro to Java", "James", 56.99));
+        library.trimToSize();
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public BookStore(ArrayList<Book> library) {
+        library = library;
+    }
+
+    public BookStore(BookList[] library) {
+        library = library;
+    }
+
+    public BookStore(String name, BookList library) {
+        name = name;
+        library = library;
+    }
+
+    public String toString() {
+        String result = "";
+        for (Book tempBook : library) {
+            result = result + tempBook.toString() + "\n";
+        }
+        return result;
+    }
+
+    public String loopupAuther(String searchString) {
+        String searchResult = "";
+        for (Book currentBook : library) {
+            if (searchString == (currentBook.getTitle())) {
+                searchResult = currentBook.getAuther();
+            }
+        }
+        return "Could Not Find Book.";
+    }
+
+    public double lookUpPrice(String searchString) {
+        double searchResult = 0;
+        for (Book currentBook : library) {
+            if ((currentBook.getTitle()) == searchString) {
+                return searchResult;
+            }
+        }
+        return Double.NaN;
+
+    }
+
+    public BookList searchForTitle(String searchString) {
+        BookList searchResult = new BookList();
+        searchString = "Java";
+        for (Book currentBook : library) {
+            if ((currentBook.getTitle()) == (searchString)) {
+                searchResult.add(currentBook);
+            }
+        }
+        searchResult.trimToSize();
+        return searchResult;
+    }
+
+    public BookList searchForAuther(String searchString) {
+        BookList searchResult = new BookList();
+        for (Book currentBook : library) {
+            if ((currentBook.getAuther()) == (searchString)) {
+                searchResult.add(currentBook);
+            }
+        }
+        searchResult.trimToSize();
+        return searchResult;
+    }
+
+    public BookList searchForPrice(String searchString) {
+        BookList searchResult = new BookList();
+        double min = Double.parseDouble(searchString);
+        for (Book currentBook : library) {
+            if (currentBook.getPrice() < currentBook.min) {
+                searchResult.add(currentBook);
+            }
+        }
+        searchResult.trimToSize();
+        return searchResult;
+
+    }
+
+    public Book getLowestPrice() {
+    int min = Book[0];
+    for (int i= 0; i <Book.length;i++) {
+        if (Book[i] > Book[min])
+            min =Book[i];
+    }
+    return min;
+
+        return null;
+    }
+
+    //Insert equals method
+    
+    
+    
+    
+    
+    
+}

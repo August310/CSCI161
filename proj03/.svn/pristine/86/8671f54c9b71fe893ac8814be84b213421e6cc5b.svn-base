@@ -1,0 +1,192 @@
+package BookStore;
+
+import BookStore.Book;
+import java.util.ArrayList;
+import java.util.Collections;
+
+public class BookStore {
+//still changes to be made
+
+    String name;
+    int Book[];
+    public BookList library;
+
+    public BookStore() {
+        library = new BookList();
+        library.add(new Book("Java Servlets", "Brown", 75.99, true, 123456));
+        library.add(new Book("Advanced HTML", "Green", 56.99, false, 886324));
+        library.add(new Book("Advanced Java", "Green", 65.99, false, 708911));
+        library.add(new Book("Intro to Flash", "James", 34.49, true, 888922));
+        library.add(new Book("Intro to HTML", "James", 29.49, false, 715540));
+        library.add(new Book("Intro to Java", "James", 56.99, true, 803129));
+
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public BookStore(BookList library) {
+        this.library = library;
+    }
+
+    public BookStore(BookList[] libraries) {
+        library = new BookList();
+        for (BookList l : libraries) {
+            for (int i = 0; i < l.getSize(); i++) {
+                library.add(l.getBook(i));
+            }
+        }
+    }
+
+    public BookStore(String name, BookList library) {
+        this.name = name;
+        this.library = library;
+    }
+//Corrected
+
+    @Override
+    public String toString() {
+        String result = "";
+        for (Book tempBook : library) {
+            result += tempBook.toString() + "\n";
+        }
+        return result;
+    }
+
+    @Deprecated
+    public String loopupAuther(String searchString) {
+        //String searchResult = "";
+        //for (Book currentBook : library) {
+        //    if (searchString == (currentBook.getTitle())) {
+        //        searchResult = currentBook.getAuther();
+        //    }
+        //}
+        //return "Could Not Find Book.";
+        return lookUpAuthor(searchString);
+    }
+
+    //Corrected
+    public String lookUpAuthor(String searchString) {
+
+        for (Book currentBook : library) {
+            if (searchString.equals(currentBook.getTitle())) {
+                return currentBook.getAuthor();
+            }
+        }
+        return "Could Not Find Book";
+    }
+
+    //Corrected
+    public double lookUpPrice(String searchString) {
+
+        for (Book currentBook : library) {
+            if (searchString.equals(currentBook.getTitle())) {
+                return currentBook.getPrice();
+            }
+        }
+        return Double.NaN;
+
+    }
+
+    //Corrected
+    public BookList searchForTitle(String searchString) {
+        BookList searchResult = new BookList();
+
+        for (Book currentBook : library) {
+            if (searchString.equals(currentBook.getTitle())) {
+                searchResult.add(currentBook);
+            }
+        }
+        searchResult.saveSize();
+        return searchResult;
+    }
+
+    @Deprecated
+    public BookList searchForAuther(String searchString) {
+        //    BookList searchResult = new BookList();
+        //    for (Book currentBook : library) {
+        //        if ((currentBook.getAuther()) == (searchString)) {
+        //            searchResult.add(currentBook);
+        //        }
+        //    }
+        //    searchResult.trimToSize();
+        //    return searchResult;
+        return searchForAuthor(searchString);
+    }
+
+    //Corrected
+    public BookList searchForAuthor(String searchString) {
+        BookList searchResult = new BookList();
+
+        for (Book currentBook : library) {
+            if (searchString.equals(currentBook.getAuthor())) {
+                searchResult.add(currentBook);
+            }
+        }
+        searchResult.saveSize();
+        return searchResult;
+    }
+
+    //Corrected
+    public BookList searchForPrice(String searchString) {
+        BookList searchResult = new BookList();
+        double min = Double.parseDouble(searchString);
+        for (Book currentBook : library) {
+            if (currentBook.getPrice() < min) {
+                searchResult.add(currentBook);
+            }
+        }
+        searchResult.saveSize();
+        return searchResult;
+
+    }
+
+    //Corrected
+    public Book getLowestPrice() {
+        if (library.getSize() == 0) {
+            return null;
+        }
+
+        Book minBook = library.list[0];
+        for (int i = 0; i < library.getSize(); i++) {
+            if (library.list[i].getPrice() < minBook.getPrice()) {
+                minBook = library.list[i];
+
+            }
+
+        }
+        return minBook;
+    }
+
+    public boolean IsHardCover(String searchString) {
+        for (Book currentBook : library) {
+            if (searchString.equals(currentBook.getTitle())) {
+                return currentBook.getHardCover();
+            }
+
+        }
+        return false;
+    }
+
+    public int getISBNNumber(String searchString) {
+        for (Book currentBook : library) {
+            if (searchString.equals(currentBook.getTitle())) {
+                return currentBook.getISBN();
+            }
+        }
+        return -1;
+    }
+
+    public BookList searchByISBN(int searchISBN) {
+        BookList searchResult = new BookList();
+        
+        for (Book currentBook : library) {
+            if (currentBook.getISBN() == searchISBN) {
+                searchResult.add(currentBook);
+            }
+        }
+        return searchResult;
+    }
+
+}

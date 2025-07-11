@@ -1,0 +1,277 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package TextAdventure;
+
+/**
+ *
+ * @author August
+ */
+public class TextAdventure {
+
+    public static void main(String[] args) {
+        
+        
+        
+        Creature dragon = new Creature("Dragon", "big and brooding", "defeated");
+        Creature orc = new Creature("Orc", "buff and dumb", "defeated");
+        Creature roommate = new Creature("Roommate", "kind and intelligent", "defeated");
+
+        Item sword = new Item("Sword", "tiny sword found in a box of cereal");
+        Item spork = new Item("Spork", "very useful for eating... or poking");
+        Item mathBook = new Item("Math Book", "unbearably boring");
+
+        Room startRoom = new Room("Basement", "A musty basement with not much around other than a door on the other side", woodDoor);
+        
+        Room room2 = new Room("Classroom", "A classroom filled with empty desks and books scattered about", sword, doubleDoor, window);
+        
+        Room room3 = new Room("Library", "A library with a vast array of books and a weird nest in the middle", dragon, hallway, window, doubleDoor, woodDoor);
+        
+        Room room4 = new Room("Arcade", "Asiles of arcade machines line this place, these things haven't been played in age", hallway);
+        
+        Room room5 = new Room("Cafeteria", "A once bustling cafeteria is now empty with nothing but a couple trays of moldy food", window, chippedWallPaper);
+        
+        Room room6 = new Room("Secret study room", "A top secret study room containing all kinds of educational materials", spork, chippedWallPaper);
+        
+        Room room7 = new Room("Skating rink", "A blast of cold air leads you to finding yourself in a skating rink", orc, window, woodDoor);
+        
+        Room room8 = new Room("Indoor playground", "An old indoor playground is starting to give into the surrounding elements, rotting away", hallway, doubleDoor);
+        
+        Room room9 = new Room("Basketball court", "A number of basketball are strewn about like someone left in a hurry", mathBook, hallway);
+
+        Room endRoom = new Room("Exit tunnel", "A tunnel to get out is on the otherside of your roommate", roommate);
+        
+        Exit doubleDoor = new Exit("Doubledoor", "Two freshly polished glass doors", "You carefully open the door", );
+
+        Exit woodDoor = new Exit("Wooden door", "An old creaky door", "You apply wd-40 to the door before walking inside", );
+
+        Exit hallway = new Exit("Hallway", "A long looming hallway that you can't see the end of", "You walk onward having no fear of the unknown", ) ;
+
+        Exit chippedWallPaper = new Exit("Chipped wallpaper", "A suspiciously chipped wallpaper, it almost looks like you can walk through it", "You rip the wallpaper away entering a brand new secret room", );
+
+        Exit window = new Exit("Window", "An open window that leads to a new room", "You cautiously go through the open window", );
+        
+        
+        
+        
+        
+        
+        
+        Player player1 = new Player("August", "The mage");
+
+        World newWorld = new World(startRoom, endRoom);
+
+        Game newGame = new Game(newWorld, player1);
+
+        newGame.setStartText("Welcome to my awesome text adventure!");
+        newGame.setVictoryText("Congratulations, you have won!");
+        newGame.start();
+
+        
+
+        //Don't need these method calls
+        
+        startRoom.getName();
+        startRoom.getDescription();
+        startRoom.getExit1();
+        
+        
+        
+        woodDoor.getName();
+        woodDoor.getDescription();
+        woodDoor.getTransition();
+        woodDoor.setDestination(room2);
+        woodDoor.getDestination();
+
+        
+
+        room2.getName();
+        room2.getDescription();
+        room2.getExit2();
+        room2.getItem();
+
+        sword.getName();
+        sword.getDescription();
+
+        doubleDoor.getName();
+        doubleDoor.getDescription();
+        doubleDoor.getTransition();
+        doubleDoor.setDestination(room3);
+        doubleDoor.getDestination();
+
+        window.getName();
+        window.getDescription();
+        window.getTransition();
+        window.setDestination(room4);
+        window.getDestination();
+
+        
+
+        room3.getName();
+        room3.getDescription();
+        room3.getCreature();
+        room3.getExit1();
+        room3.getExit2();
+        room3.getExit3();
+        room3.getExit4();
+
+        dragon.getName();
+        dragon.getDescription();
+        dragon.getDefeatedText();
+        dragon.setItemToDestroy(sword);
+        dragon.getItemToDestroy();
+
+        hallway.getName();
+        hallway.getDescription();
+        hallway.getTransition();
+        hallway.setDestination(room8);
+        hallway.getDestination();
+
+        window.getName();
+        window.getDescription();
+        window.getTransition();
+        window.setDestination(room5);
+        window.getDestination();
+
+        doubleDoor.getName();
+        doubleDoor.getDescription();
+        doubleDoor.getTransition();
+        doubleDoor.setDestination(room2);
+        doubleDoor.getDestination();
+
+        woodDoor.getName();
+        woodDoor.getDescription();
+        woodDoor.getTransition();
+        woodDoor.setDestination(room7);
+        woodDoor.getDestination();
+
+        hallway.setCreatureBlocks(true);
+        window.setCreatureBlocks(true);
+        woodDoor.setCreatureBlocks(true);
+
+        
+
+        room4.getName();
+        room4.getDescription();
+        room4.getExit1();
+
+        hallway.getName();
+        hallway.getDescription();
+        hallway.getTransition();
+        hallway.setDestination(room5);
+        hallway.getDestination();
+
+        
+
+        room5.getName();
+        room5.getDescription();
+        room5.getExit1();
+        room5.setSecretExit(chippedWallPaper);
+        room5.getSecretExit();
+
+        window.getName();
+        window.getDescription();
+        window.getTransition();
+        window.setDestination(room3);
+        window.getDestination();
+
+        chippedWallPaper.getName();
+        chippedWallPaper.getDescription();
+        chippedWallPaper.getTransition();
+        chippedWallPaper.setDestination(room6);
+        chippedWallPaper.getDestination();
+
+        
+
+        room6.getName();
+        room6.getDescription();
+        room6.setSecretExit(chippedWallPaper);
+        room6.getSecretExit();
+        room6.getItem();
+
+        spork.getName();
+        spork.getDescription();
+
+        chippedWallPaper.getName();
+        chippedWallPaper.getDescription();
+        chippedWallPaper.getTransition();
+        chippedWallPaper.setDestination(room5);
+        chippedWallPaper.getDestination();
+
+       
+
+        room7.getName();
+        room7.getDescription();
+        room7.getExit1();
+        room7.getExit2();
+        room7.getCreature();
+
+        orc.getName();
+        orc.getDescription();
+        orc.getDefeatedText();
+        orc.setItemToDestroy(spork);
+        orc.getItemToDestroy();
+
+        woodDoor.setCreatureBlocks(true);
+
+        woodDoor.getName();
+        woodDoor.getDescription();
+        woodDoor.getTransition();
+        woodDoor.setDestination(room9);
+        woodDoor.getDestination();
+
+        window.getName();
+        window.getDescription();
+        window.getTransition();
+        window.setDestination(room3);
+        window.getDestination();
+
+        
+
+        room8.getName();
+        room8.getDescription();
+        room8.getExit1();
+        room8.getExit2();
+
+        hallway.getName();
+        hallway.getDescription();
+        hallway.getTransition();
+        hallway.setDestination(room9);
+        hallway.getDestination();
+
+        doubleDoor.getName();
+        doubleDoor.getDescription();
+        doubleDoor.getTransition();
+        doubleDoor.setDestination(endRoom);
+        doubleDoor.getDestination();
+
+        
+
+        room9.getName();
+        room9.getDescription();
+        room9.getExit1();
+        room9.getItem();
+
+        mathBook.getName();
+        mathBook.getDescription();
+
+        hallway.getName();
+        hallway.getDescription();
+        hallway.getTransition();
+        hallway.setDestination(room8);
+        hallway.getDestination();
+
+        
+
+        endRoom.getName();
+        endRoom.getDescription();
+        endRoom.getCreature();
+
+        roommate.getName();
+        roommate.getDescription();
+        roommate.getDefeatedText();
+
+    }
+
+}

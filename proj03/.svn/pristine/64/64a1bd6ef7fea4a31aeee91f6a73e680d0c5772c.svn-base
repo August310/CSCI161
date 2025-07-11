@@ -1,0 +1,49 @@
+package BookStore;
+
+public class Book {
+//still changes to be made
+    String title;
+    String author;
+    double price;
+    
+
+    public Book() {
+        title = "";
+        author = "";
+        price = 0.0;
+    }
+
+    public Book(String newTitle, String newAuthor, double newPrice) {
+        title = newTitle;
+        author = newAuthor;
+        price = newPrice;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+    @Deprecated
+    public String getAuther() {
+        return getAuthor();
+    }
+    
+    public String getAuthor(){
+        return author;
+    }
+    public double getPrice() {
+        return price;
+    }
+    @Deprecated
+    public double getCost() {
+        return price;
+    }
+
+    @Override
+    public String toString() {
+        return ("title: " + title + "\t"
+                + "auther: " + author + "\t"
+                + "price: " + price);
+
+    }
+
+}

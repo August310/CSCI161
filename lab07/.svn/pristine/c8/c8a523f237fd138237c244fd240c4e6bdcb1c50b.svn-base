@@ -1,0 +1,36 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+package MyUnitTests;
+
+import org.junit.Test;
+import static org.junit.Assert.*;
+
+/**
+ *
+ * @author araderma
+ */
+public class ScrabbleScoreTest {
+    
+    public ScrabbleScoreTest() {
+    }
+
+    @Test
+    public void templateTest() 
+    {
+        // setup test values
+        
+        // set expected result
+        
+        // get actual result
+        
+        // compare expected and actual results
+        
+    }
+
+    
+    
+}

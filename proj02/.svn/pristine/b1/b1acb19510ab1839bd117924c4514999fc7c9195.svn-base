@@ -1,0 +1,52 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package HelperClasses;
+
+/**
+ *
+ * @author August Preuss
+ */
+public class MenuHelper {
+    
+    public static int displayMenu(String message, int min, int max){
+        
+    }
+
+
+    public static String getInput(String prompt){
+        
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}

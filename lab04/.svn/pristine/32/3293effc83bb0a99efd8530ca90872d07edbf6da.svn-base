@@ -1,0 +1,57 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package Questions;
+
+/**
+ *
+ * @author august.preuss
+ */
+public class Soccer {
+
+    private int jerseyNumber;
+    private String position;
+    private int goalsScored;
+
+    public Soccer() {
+        jerseyNumber = 0;
+        position = "unknown";
+        goalsScored = 0;
+    }
+
+    public Soccer(int jerseyNumber, String position, int goalsScored) {
+        this.jerseyNumber = jerseyNumber;
+        this.position = position;
+        this.goalsScored = goalsScored;
+    }
+
+    public int getJerseyNumber() {
+        return jerseyNumber;
+    }
+
+    public String getPosition() {
+        return position;
+    }
+
+    public int goalsScored() {
+        return goalsScored;
+    }
+
+    public void setJerseyNumber(int newJerseyNumber) {
+        jerseyNumber = newJerseyNumber;
+    }
+
+    public void setPosition(String newPosition) {
+        position = newPosition;
+    }
+
+    public void setGoalsScored(int newGoalsScored) {
+        goalsScored = newGoalsScored;
+    }
+
+    public String toString() {
+        return "My jersey number is " + jerseyNumber + " and the position I play is " + position + ". I have scored " + goalsScored + " goals this season.";
+    }
+
+}

@@ -1,0 +1,64 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package TextAdventure;
+
+/**
+ *
+ * @author August
+ */
+public class Exit {
+
+    private String exitName;
+    private String exitDescription;
+    private String transitionText;
+    private Room destination;
+    private Item requiredItem;
+    private boolean creatureBlocks;
+
+    //Potentially add a parameter stating Room destination for this portion
+    public Exit(String exitName, String exitDescription, String transitionText, Room destination) {
+        this.exitName = exitName;
+        this.exitDescription = exitDescription;
+        this.transitionText = transitionText;
+        this.destination = destination;
+    }
+
+    public String getName() {
+        return exitName;
+    }
+
+    public String getDescription() {
+        return exitDescription;
+    }
+
+    public String getTransition() {
+        return transitionText;
+    }
+
+    public Room getDestination() {
+        return destination;
+    }
+
+    public Item getRequiredItem() {
+        return requiredItem;
+    }
+
+    public boolean getCreatureBlocks() {
+        return creatureBlocks;
+    }
+
+    public void setDestination(Room newDestination) {
+        destination = newDestination;
+    }
+
+    public void setRequiredItem(Item newRequiredItem) {
+        requiredItem = newRequiredItem;
+    }
+
+    public void setCreatureBlocks(boolean newCreatureBlocks) {
+        creatureBlocks = newCreatureBlocks;
+    }
+
+}

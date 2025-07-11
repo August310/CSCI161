@@ -1,0 +1,41 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package TextAdventure;
+
+/**
+ *
+ * @author August
+ */
+public class World {
+    
+    private Room startRoom;
+    private Room endRoom;
+    
+    public World(Room startRoom, Room endRoom){
+        this.startRoom = startRoom;
+        this.endRoom   = endRoom;
+    }
+    
+    public Room getStartingRoom(){
+        return startRoom;
+    }
+            
+    public Room getEndingRoom(){
+        return endRoom;
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+}

@@ -1,0 +1,161 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package Game;
+
+import GameEntities.Horse;
+import GameEntities.Survivor;
+import HelperClasses.DescriptionHelper;
+import static HelperClasses.DescriptionHelper.getStatus;
+import HelperClasses.MenuHelper;
+import java.util.Random;
+
+/**
+ *
+ * @author August Preuss
+ */
+public class Game {
+    
+    private Survivor survivor;
+    private Horse horse;
+    private double difficultyModifier;
+    private int distanceTraveled;
+    private int pursuerDistance;
+    private int distanceBetweenPursuerAndSurvivor;
+    private String timeOfDay;
+    private String weather;
+    private String location;
+    private Random rand;
+
+
+    private boolean checkHorseCanTravel(){
+        
+        if((horse.getThirst() <= 0) || (horse.getHunger() <= 0) || (horse.getEnergy() <= 0)){
+            return false;
+        }
+        else{
+            System.out.println(DescriptionHelper.getStatus(horse));
+            return true;
+            
+            
+        }           
+       
+            
+        
+    }
+
+    private boolean checkSurvivorIsDead(){
+        if((survivor.getThirst() <= 0) || (survivor.getHunger() <= 0) || (survivor.getEnergy() <= 0) || (survivor.getHealth() <= 0)){
+            return true;
+        }
+        else{
+            System.out.println(DescriptionHelper.getStatus(survivor));
+            return false;
+        }
+        
+    }
+
+    private void getNewLocation(){
+        int num = rand.nextInt(14 - 0 + 1) + 1;
+        if(num <= 1 && num >= 0){
+            System.out.println("Oasis");
+        }
+        else if(num >= 2 && num <= 3){
+            System.out.println("Ruins");
+        }    
+        else if(num >= 4 && num <= 5){
+            System.out.println("River Bank");
+        }
+        else if(num >= 6 && num <= 11){
+            System.out.println("Desert Plains");
+        }
+        else{
+            System.out.println("Desert Hills");
+        }
+    }
+
+    private void getNewWeather(){
+        int num = rand.nextInt(9 - 0 + 1) + 1;
+        if(num == 0){
+            System.out.println("Sandstorm");
+        }
+        else if(num == 1){
+            System.out.println("Raining");
+        }    
+        else if(num == 2){
+            System.out.println("Cloudy");
+        }
+        else if(num >= 3 && num <= 5){
+            System.out.println("Warm");
+        }
+        else{
+            //Correct it to switch depending on time of day
+            System.out.println("Extremely Hot");
+        }
+    }
+
+    private void getNewTimeOfDay(){
+        //work on figuring out how to cycle something
+    }
+
+    private String getPursuerDistanceDescription(){
+        //work n figuring out how to say how far back pursuers are
+    }
+
+    private void outputTurnInformation(){
+        //look at whats required to enter in this
+    }
+
+    private void processTurn(){
+        
+        //Change parameters eventually
+        MenuHelper.displayMenu(weather, pursuerDistance, pursuerDistance);
+        
+        MenuHelper.getInput(weather);
+    }
+
+    private void processRest(){
+        //make it so survivor and horse gain energy
+    }
+
+    private void processFoodSearch(){
+        //make it so survivor and horse gain hunger
+    }
+
+    private void processWaterSearch(){
+        //make it so survivor and horse gain hunger
+    }
+
+    private void processTravelCarefully(){
+        //make it so survivor travels not as far
+    }
+
+    private void processTravelRegularly(){
+        //make it so survivor travels medium distance
+    }
+
+    private void processRideAllOut(){
+        //make it so survivor travels furthest distance
+    }
+
+    private void processPursuers(){
+        //make it so pursuers distance is affected by weather, time of day, etc
+    }
+
+    
+    
+    //Constructor methods
+    public void Game(int difficulty, Horse horse, Survivor survivor){
+        //should initialize the other instance variables to reasonable values
+    }
+    
+    public void start(){
+        //Executes the game logic
+    }
+
+
+
+
+
+}

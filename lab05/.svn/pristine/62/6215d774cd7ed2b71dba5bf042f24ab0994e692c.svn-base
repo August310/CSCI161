@@ -1,0 +1,60 @@
+package Questions;
+
+import java.awt.Color;
+import java.awt.EventQueue;
+import java.awt.Graphics;
+import java.awt.Polygon;
+import javax.swing.JFrame;
+
+/**
+ *
+ * @author (August Preuss)
+ */
+public class ModernArt extends JFrame {
+
+    @Override
+    public void paint(Graphics g) {
+        // Add your code here!
+        g.drawRect(50, 50, 50, 25);
+       
+        g.setColor(Color.red);
+        g.drawOval(100, 150, 200, 300);
+        
+        g.setColor(Color.magenta);
+        g.fillOval(500, 100, 100, 450);
+        
+        g.setColor(Color.blue);
+        Polygon triangle = new Polygon();
+        triangle.addPoint(250, 250);
+        triangle.addPoint(125, 150);
+        triangle.addPoint(375, 150);
+        g.drawPolygon(triangle);
+        
+        g.setColor(Color.green);
+        Polygon weirdShape = new Polygon();
+        weirdShape.addPoint(65, 100);
+        weirdShape.addPoint(400, 233);
+        weirdShape.addPoint(84, 47);
+        weirdShape.addPoint(500, 100);
+        g.fillPolygon(weirdShape);
+        
+        g.setColor(Color.black);
+        g.drawString("Art is so much fun!", 300, 300);
+        g.drawLine(35, 35, 350, 350);
+        g.drawLine(500, 100, 300, 50);
+        g.drawLine(250, 355, 50, 80);
+    }
+
+    public ModernArt() {
+        // This controls the size of Window and Exiting the program when is closes
+        super.setSize(600, 600);
+        super.setDefaultCloseOperation(EXIT_ON_CLOSE);
+    }
+
+    public static void main(String[] args) {
+        // Creates and displays the Window when running this class
+        EventQueue.invokeLater(() -> {
+            new ModernArt().setVisible(true);
+        });
+    }
+}

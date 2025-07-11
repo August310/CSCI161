@@ -1,0 +1,80 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package Questions.Chapter9;
+
+/**
+ *
+ * @author August Preuss
+ */
+public class ArrayUtilities {
+    
+private ArrayUtilities(){
+    
+}
+
+
+public static boolean arrayAreEqual(int[] array1, int[] array2){
+    
+    if(array1 == null && array2 == null){
+        return false;
+    }
+        
+    if(array1.length != array2.length){
+        return false;
+    }    
+    
+    for(int i = 0; i < array1.length; i++){
+        if(array1[i] != array2[i]){
+            return false;
+        }
+    }
+    return true;
+}
+
+
+private static int[] resizeArray(int[] array, int factor){
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}

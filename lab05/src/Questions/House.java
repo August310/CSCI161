@@ -1,0 +1,95 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package Questions;
+
+import java.awt.Color;
+import java.awt.Graphics;
+import java.awt.Polygon;
+
+/**
+ *
+ * @author august.preuss
+ */
+public class House {
+
+    private int xPosition;
+    private int yPosition;
+    private int width;
+    private int height;
+    private Color color;
+
+    public House(int xPosition, int yPosition, int width, int height, Color color) {
+        this.xPosition = xPosition;
+        this.yPosition = yPosition;
+        this.width = width;
+        this.height = height;
+        this.color = color;
+    }
+
+    public int getXPosition() {
+        return xPosition;
+    }
+
+    public int getYPoisition() {
+        return yPosition;
+    }
+
+    public int getWidth() {
+        return width;
+    }
+
+    public int getHeight() {
+        return height;
+    }
+
+    public Color getColor() {
+        return color;
+    }
+
+    public void setXPosition(int newXPosition) {
+        xPosition = newXPosition;
+    }
+
+    public void setYPosition(int newYPosition) {
+        yPosition = newYPosition;
+    }
+
+    public void setWidth(int newWidth) {
+        width = newWidth;
+    }
+
+    public void setHeight(int newHeight) {
+        height = newHeight;
+    }
+
+    public void setColor(Color newColor) {
+        color = newColor;
+    }
+
+    public void draw(Graphics g) {
+
+        //House outline
+        g.setColor(color);
+        g.fillRect(xPosition, yPosition, 250, 200);
+
+        //Door
+        g.setColor(Color.RED);
+        g.fillRect(xPosition + 100, yPosition + 100, 50, 100);
+
+        //Window
+        g.setColor(Color.MAGENTA);
+        g.fillOval(xPosition + 25, yPosition + 75, 50, 50);
+
+        //Roof
+        g.setColor(Color.BLACK);
+        Polygon roof = new Polygon();
+        roof.addPoint(xPosition + 0, yPosition + 0);
+        roof.addPoint(xPosition + 250, yPosition + 0);
+        roof.addPoint(xPosition + 125, yPosition - 100);
+        g.fillPolygon(roof);
+
+    }
+
+}

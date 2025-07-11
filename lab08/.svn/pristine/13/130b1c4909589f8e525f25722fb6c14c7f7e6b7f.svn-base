@@ -1,0 +1,53 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package Questions.Chapter9;
+
+import java.util.Random;
+
+/**
+ *
+ * @author August Preuss
+ */
+public class ShakespeareanInsultGenerator {
+
+    public static String randomInsult() {
+
+        Random rand = new Random();
+        String[] firstWords = {
+            "bawdy",
+            "craven",
+            "dankish",
+            "frothy",
+            "lumpish",
+            "pribbling",
+            "surly",
+            "villainous"};
+
+        String[] secondWords = {
+            "beef-witted",
+            "clay-brained",
+            "dizzy-eyed",
+            "flap-mouthed",
+            "ill-nutured",
+            "motley-minded",
+            "sheep-biting",
+            "tickle-brained"};
+
+        String[] thirdWords = {
+            "bugbear",
+            "clotpole",
+            "harpy",
+            "lout",
+            "miscreant",
+            "molwarp",
+            "puttock",
+            "wagtail"};
+
+        return firstWords[rand.nextInt(firstWords.length)] + " "
+                + secondWords[rand.nextInt(secondWords.length)] + " "
+                + thirdWords[rand.nextInt(thirdWords.length)];
+    }
+
+}

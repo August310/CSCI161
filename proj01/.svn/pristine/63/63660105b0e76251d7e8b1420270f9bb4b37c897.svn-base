@@ -1,0 +1,73 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package TextAdventure;
+
+/**
+ *
+ * @author August
+ */
+public class TextAdventure {
+    
+    public static void main(String [] args){
+        Player player1 = new Player("August", "The mage");
+        
+        World newWorld = new World(Room startRoom, Room endRoom);
+        
+        Game newGame = new Game(newWorld, player1);
+    
+        newGame.setStartText("Welcome to my awesome text adventure!");
+        newGame.setVictoryText("Congratulations, you have won!");
+        newGame.start();
+    
+        
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+}
